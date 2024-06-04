@@ -20,7 +20,8 @@ public class AutoService implements IAutoService {
     public Mensaje acelarar_Auto() {
         Auto data= iniciar_data(); //Iniciamos la data
         int acelarion=1;  //Incrementamos la acelaracion en 1
-        while (data.getVelocidad_actual() <= data.getVelocidad_maxima()){
+        System.out.println("La velocidad actual es de " + data.getVelocidad_actual() + "km/h");
+        while (data.getVelocidad_actual() < data.getVelocidad_maxima()){
             int incrementar_velocidad= data.getVelocidad_actual() + acelarion;
             data.velocidad_actual=incrementar_velocidad;
             System.out.println("Vamos acelerando, velocidad actual: " + data.getVelocidad_actual() + "km/h");
